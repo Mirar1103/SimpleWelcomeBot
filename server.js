@@ -4,7 +4,7 @@
 const Discord = require("discord.js"); // Requires the npm package 'discord.js'.
 const client = new Discord.Client();
 
-client.login('NTIzMjg4NzI3NjM2NjcyNTIz.DvXY0A.E3ZlN8Z5voNQTitb3GAy2Fyty6k');
+client.login(process.env.token);
 client.on("guildMemberAdd", (member) => {
     let guild = member.guild; // Reading property `guild` of guildmember object.
     let memberTag = member.user.tag; // GuildMembers don't have a tag property, read property user of guildmember to get the user object from it
